@@ -15,7 +15,7 @@ const fetcher = (...args) => fetch(...args).then(res => res.text())
 export const GridItem = ({ children, href, title, thumbnail }) => (
   <Box w="100%" textAlign="center">
     <LinkBox cursor="pointer">
-      <Image
+      <Img
         src={thumbnail}
         alt={title}
         className="grid-item-thumbnail"
@@ -31,7 +31,7 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
 )
 
 export const WorkGridItem = ({ children, url, title, thumbnail }) => {
-  const { data, error } = useSWR(thumbnail, fetcher)
+  const { data } = useSWR(thumbnail, fetcher)
 
   let thumbnailData
   if (data) {

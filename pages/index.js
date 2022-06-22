@@ -30,6 +30,8 @@ const Home = ({ repos }) => {
   repos.map(repo => languages.push(repo.language))
   languages = [...new Set(languages)]
 
+  const colorScheme = useColorModeValue('purple', 'orange')
+
   return (
     <Layout>
       <Container>
@@ -95,15 +97,12 @@ const Home = ({ repos }) => {
 
         <Section delay={0.1}>
           <Heading as="h3" variant="section-title">
-            I've Used
+            I&#39;ve Used
           </Heading>
           <Wrap>
             {languages.map((language, index) => (
               <WrapItem key={index}>
-                <Badge
-                  variant="outline"
-                  colorScheme={useColorModeValue('purple', 'orange')}
-                >
+                <Badge variant="outline" colorScheme={colorScheme}>
                   {language}
                 </Badge>
               </WrapItem>
@@ -139,7 +138,7 @@ const Home = ({ repos }) => {
                 >
                   <Button
                     variant="ghost"
-                    colorScheme={useColorModeValue('purple', 'orange')}
+                    colorScheme={colorScheme}
                     leftIcon={<IoLogoInstagram />}
                   >
                     {config.social.instagram}
@@ -156,7 +155,7 @@ const Home = ({ repos }) => {
                 >
                   <Button
                     variant="ghost"
-                    colorScheme={useColorModeValue('purple', 'orange')}
+                    colorScheme={colorScheme}
                     leftIcon={<IoLogoLinkedin />}
                   >
                     {config.social.linkedin}
@@ -169,7 +168,7 @@ const Home = ({ repos }) => {
               <ListItem>
                 <Button
                   variant="ghost"
-                  colorScheme={useColorModeValue('purple', 'orange')}
+                  colorScheme={colorScheme}
                   leftIcon={<PhoneIcon />}
                 >
                   {config.social.phone}
@@ -182,7 +181,7 @@ const Home = ({ repos }) => {
                 <Link href={`mailto:${config.social.email}/`}>
                   <Button
                     variant="ghost"
-                    colorScheme={useColorModeValue('purple', 'orange')}
+                    colorScheme={colorScheme}
                     leftIcon={<EmailIcon />}
                   >
                     {config.social.email}
