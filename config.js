@@ -32,7 +32,8 @@ module.exports = {
         'boilerplate-npm',
         'boilerplate-express',
         'pyshp-latihan1',
-        'dokumentasi-python'
+        'dokumentasi-python',
+        'homepage'
       ] // These projects will not be displayed. example: ['my-project1', 'my-project2']
     }
   },
